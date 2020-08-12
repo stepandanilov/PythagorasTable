@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/table_style.css">
+    <title>Проверка таблицы умножения</title>
+</head>
+<body>
+    <input type="button" id="startBtn" value="Начать проверку" onclick="start()">
+    <input type="button" id="endBtn" value="Закончить" onclick="end(this)">
+    <input type="button" id="restartBtn" value="Заново" onclick="restart()">
+    <input type="button" id="randomizeNumbersBtn" value="Перемешать числа" onclick="randomizeNumbers()">
+    <form action="menu.html">
+        <input type="submit" id="goBackBtn" value="Назад">
+    </form>
+    <h1 id="timer"></h1>
+    <div class="outer">
+        <div class="row">
+            <input type="input" id="text22" class="answers" placeholder="0">
+            <input type="input" id="text23" class="answers" placeholder="0">
+            <input type="input" id="text24" class="answers" placeholder="0">
+            <input type="input" id="text25" class="answers" placeholder="0">
+            <input type="input" id="text26" class="answers" placeholder="0">
+            <input type="input" id="text27" class="answers" placeholder="0">
+            <input type="input" id="text28" class="answers" placeholder="0">
+            <input type="input" id="text29" class="answers" placeholder="0">
+        </div>
+        <div class="row">
+            <input type="input" id="text32" class="answers" placeholder="0">
+            <input type="input" id="text33" class="answers" placeholder="0">
+            <input type="input" id="text34" class="answers" placeholder="0">
+            <input type="input" id="text35" class="answers" placeholder="0">
+            <input type="input" id="text36" class="answers" placeholder="0">
+            <input type="input" id="text37" class="answers" placeholder="0">
+            <input type="input" id="text38" class="answers" placeholder="0">
+            <input type="input" id="text39" class="answers" placeholder="0">
+        </div>
+        <div class="row">
+            <input type="input" id="text42" class="answers" placeholder="0">
+            <input type="input" id="text43" class="answers" placeholder="0">
+            <input type="input" id="text44" class="answers" placeholder="0">
+            <input type="input" id="text45" class="answers" placeholder="0">
+            <input type="input" id="text46" class="answers" placeholder="0">
+            <input type="input" id="text47" class="answers" placeholder="0">
+            <input type="input" id="text48" class="answers" placeholder="0">
+            <input type="input" id="text49" class="answers" placeholder="0">
+        </div>
+        <div class="row">
+            <input type="input" id="text52" class="answers" placeholder="0">
+            <input type="input" id="text53" class="answers" placeholder="0">
+            <input type="input" id="text54" class="answers" placeholder="0">
+            <input type="input" id="text55" class="answers" placeholder="0">
+            <input type="input" id="text56" class="answers" placeholder="0">
+            <input type="input" id="text57" class="answers" placeholder="0">
+            <input type="input" id="text58" class="answers" placeholder="0">
+            <input type="input" id="text59" class="answers" placeholder="0">
+        </div>
+        <div class="row">
+            <input type="input" id="text62" class="answers" placeholder="0">
+            <input type="input" id="text63" class="answers" placeholder="0">
+            <input type="input" id="text64" class="answers" placeholder="0">
+            <input type="input" id="text65" class="answers" placeholder="0">
+            <input type="input" id="text66" class="answers" placeholder="0">
+            <input type="input" id="text67" class="answers" placeholder="0">
+            <input type="input" id="text68" class="answers" placeholder="0">
+            <input type="input" id="text69" class="answers" placeholder="0">
+        </div>
+        <div class="row">
+            <input type="input" id="text72" class="answers" placeholder="0">
+            <input type="input" id="text73" class="answers" placeholder="0">
+            <input type="input" id="text74" class="answers" placeholder="0">
+            <input type="input" id="text75" class="answers" placeholder="0">
+            <input type="input" id="text76" class="answers" placeholder="0">
+            <input type="input" id="text77" class="answers" placeholder="0">
+            <input type="input" id="text78" class="answers" placeholder="0">
+            <input type="input" id="text79" class="answers" placeholder="0">
+        </div>
+        <div class="row">
+            <input type="input" id="text82" class="answers" placeholder="0">
+            <input type="input" id="text83" class="answers" placeholder="0">
+            <input type="input" id="text84" class="answers" placeholder="0">
+            <input type="input" id="text85" class="answers" placeholder="0">
+            <input type="input" id="text86" class="answers" placeholder="0">
+            <input type="input" id="text87" class="answers" placeholder="0">
+            <input type="input" id="text88" class="answers" placeholder="0">
+            <input type="input" id="text89" class="answers" placeholder="0">
+        </div>
+        <div class="row">
+            <input type="input" id="text92" class="answers" placeholder="0">
+            <input type="input" id="text93" class="answers" placeholder="0">
+            <input type="input" id="text94" class="answers" placeholder="0">
+            <input type="input" id="text95" class="answers" placeholder="0">
+            <input type="input" id="text96" class="answers" placeholder="0">
+            <input type="input" id="text97" class="answers" placeholder="0">
+            <input type="input" id="text98" class="answers" placeholder="0">
+            <input type="input" id="text99" class="answers" placeholder="0">
+        </div>
+    </div>
+    <div class="numbercolumn">
+        <div class="numbers" id="numbercolumn2">2</div>
+        <div class="numbers" id="numbercolumn3">3</div>
+        <div class="numbers" id="numbercolumn4">4</div>
+        <div class="numbers" id="numbercolumn5">5</div>
+        <div class="numbers" id="numbercolumn6">6</div>
+        <div class="numbers" id="numbercolumn7">7</div>
+        <div class="numbers" id="numbercolumn8">8</div>
+        <div class="numbers" id="numbercolumn9">9</div>
+    </div>
+    <div class="numberrow">
+        <div class="numbersInRow" id="numberrow2">2</div>
+        <div class="numbersInRow" id="numberrow3">3</div>
+        <div class="numbersInRow" id="numberrow4">4</div>
+        <div class="numbersInRow" id="numberrow5">5</div>
+        <div class="numbersInRow" id="numberrow6">6</div>
+        <div class="numbersInRow" id="numberrow7">7</div>
+        <div class="numbersInRow" id="numberrow8">8</div>
+        <div class="numbersInRow" id="numberrow9">9</div>
+    </div>
+    <div class="answersDiv">
+        <p id="accuracy"></p>
+    </div>
+    <div id="parameters">
+        <div>
+            <input type="checkbox" id="negativeNumbers"> Отрицательные числа
+        </div>
+        <div>
+            <input type="checkbox" id="decimalNumbers"> Десятичные числа
+        </div>
+        <div>
+            <input type="checkbox" id="powerOfTwo"> Степени двойки
+        </div>
+        <div>
+            <input type="checkbox" id="powerOfThree"> Степени тройки
+        </div>
+    </div>
+    <script src="js/stopwatch.js"></script>
+    <script src="js/table_script.js"></script>
+    </body>
+</html>

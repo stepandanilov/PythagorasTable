@@ -1,0 +1,27 @@
+.menu{
+    border:1px solid black;
+    width:50vw;
+    height: 50vh;
+
+    margin:auto;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.buttons{
+    width:200px;
+    height: 50px;
+    border-radius: 5px;
+}
+.buttons:hover{
+    cursor:pointer;
+}
+#heading{
+    text-align: center;
+}

@@ -1,0 +1,160 @@
+.answers{
+    width:50px;
+    height:25px;
+    margin-right: 10px;
+    text-align: center;
+    
+    font-family:"Lato";
+    font-size:30px;
+}
+.outer{
+    width:50vw;
+    margin:auto;
+
+    height: 75vh;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 6vw;
+
+}
+.numbercolumn{
+    width:3vw;
+    height:75vh;
+
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:55vw;
+}
+.numberrow{
+    height: 6vh;
+    width:50vw;
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+    
+    position: absolute;
+    top:0;
+    left:1vw;
+    bottom:82vh;
+    right: 0;
+}
+.numbersInRow{
+    display:inline-block;
+    width:50px;
+    height:20px;
+    margin-right:18px;
+    text-align: center;
+}
+#startBtn{
+    width:200px;
+    height: 50px;
+
+    display:block;
+    margin:auto;
+    position: absolute;
+    top:5vh;
+    left:0;
+    bottom:20vh;
+    right: 82vw;
+    border-radius: 5px;
+}
+#endBtn{
+    width:200px;
+    height: 50px;
+
+    display:block;
+    margin:auto;
+    position: absolute;
+    top:5vh;
+    left:0;
+    bottom:20vh;
+    right: 82vw;
+    border-radius: 5px;
+}
+#restartBtn{
+    width:200px;
+    height: 50px;
+
+    display:block;
+    margin:auto;
+    position: absolute;
+    top:5vh;
+    left:0;
+    bottom:20vh;
+    right: 82vw;
+    border-radius: 5px;
+}
+#timer{
+    margin:auto;
+    position: absolute;
+    top:10vh;
+    bottom:70vh;
+    left:75vw;
+    right:0;
+    text-align: center;
+
+    font-family: "Lato";
+    font-size:50px;
+    font-weight: 300;
+}
+body{
+    font-family:"Lato";
+    font-size:30px;
+}
+.answersDiv{
+    border:1px solid black;
+    width: 20vw;
+    height: 50vh;
+    margin:auto;
+    position:absolute;
+    top:0;
+    bottom: -45vh;
+    left:0;
+    right:-75vw;
+    text-align: center;
+}
+#goBackBtn{
+    width:200px;
+    height: 50px;
+    border-radius: 5px;
+}
+#parameters{
+    border:1px solid black;
+    display: block;
+    margin: 0 auto;
+
+    width:17vw;
+    height: 20vh;
+    position: absolute;
+    top:15vh;
+    bottom:20vh;
+    left:0;
+    right:80vw;
+
+    font-size: 20px;
+}
+#randomizeNumbersBtn{
+    position: absolute;
+    width:200px;
+    height: 50px;
+    border-radius: 5px;
+
+    margin:auto;
+    top:25vh;
+    left:0;
+    bottom:20vh;
+    right: 82vw;
+}

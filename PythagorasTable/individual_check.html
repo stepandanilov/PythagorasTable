@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка</title>
+    <link rel="stylesheet" type="text/css" href="css/second_check_style.css">
+</head>
+<body>
+    <form action="menu-new.html">
+        <input type="submit" id="goBackBtn" value="Назад">
+    </form>
+    <input type="button" id="startBtn" value="Начать проверку" onclick="start()" >
+    <input type="number" id="nCount" placeholder="Введите количество повторов">
+    <h1 id="header">Частичная проверка</h1>
+    <div id="mainDiv">
+        <p id="stringP" class="inDiv">* X * =</p>
+        <input type="number" id="answer" class="inDiv">
+    </div>
+    <div id="answerBox">
+        <p id="answerP"></p>
+        <p id="stopwatch"></p>
+        <p id="wrongAnswers"></p>
+    </div>
+    <script src="js/stopwatch.js"></script>
+    <script src="js/second_script.js"></script>
+</body>
+</html>
