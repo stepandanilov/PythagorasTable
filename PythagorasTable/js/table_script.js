@@ -10,16 +10,19 @@ document.getElementById("restartBtn").style.visibility="hidden";
 
 function start(){
     StartBool = true;
-    reset();
-    generateNumbers();
     watch.start();
     document.getElementById("startBtn").style.visibility="hidden";
     document.getElementById("endBtn").style.visibility="visible";
+    document.getElementById("generateNumbersBtn").style.visibility="hidden";
+    document.getElementById("randomizeNumbersBtn").style.visibility="hidden";
+    
 }
 function end(obj){
     StartBool = false;
     watch.stop();
     watch.showTime();
+    document.getElementById("generateNumbersBtn").style.visibility="visible";
+    document.getElementById("randomizeNumbersBtn").style.visibility="visible";
     document.getElementById("endBtn").style.visibility="hidden";
     document.getElementById("restartBtn").style.visibility="visible";
     check();
@@ -67,9 +70,11 @@ function reset(){
     } 
     nCorrect=0;
     watch.reset();
+    timer.textContent="";
     document.getElementById("accuracy").textContent="";
 }
 function generateNumbers(){
+    reset();
     var negativeNumbers=document.getElementById("negativeNumbers").checked;
     var decimalNumbers=document.getElementById("decimalNumbers").checked;
     var powerOfTwo=document.getElementById("powerOfTwo").checked;
@@ -134,4 +139,26 @@ function generateNumbers(){
         if (decimalRandom) document.getElementById("numberrow" + i).innerText="0." + document.getElementById("numberrow" + i).innerText;
         if (negativeRandom) document.getElementById("numberrow" + i).innerText="-" + document.getElementById("numberrow" + i).innerText;
     } 
+}
+function randomizeNumbers(){
+    var i;
+    for(i=0;i<10;i++){
+        var randomNumber1 = getRandomInt(8) + 2;
+        var randomNumber2 = getRandomInt(8) + 2;
+        
+        var temp = document.getElementById("numbercolumn" + randomNumber1).innerText;
+        document.getElementById("numbercolumn" + randomNumber1).innerText = document.getElementById("numbercolumn" + randomNumber2).innerText;
+        document.getElementById("numbercolumn" + randomNumber2).innerText = temp;
+    }
+    for(i=0;i<10;i++){
+        var randomNumber1 = getRandomInt(8) + 2;
+        var randomNumber2 = getRandomInt(8) + 2;
+        
+        var temp = document.getElementById("numberrow" + randomNumber1).innerText;
+        document.getElementById("numberrow" + randomNumber1).innerText = document.getElementById("numberrow" + randomNumber2).innerText;
+        document.getElementById("numberrow" + randomNumber2).innerText = temp;
+    }
+}
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
 }
