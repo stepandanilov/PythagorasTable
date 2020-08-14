@@ -1,5 +1,5 @@
 .answers{
-    width:50px;
+    width:65px;
     height:25px;
     margin-right: 10px;
     text-align: center;
@@ -8,7 +8,7 @@
     font-size:30px;
 }
 .outer{
-    width:50vw;
+    width:60vw;
     margin:auto;
 
     height: 75vh;
@@ -18,9 +18,9 @@
 
     position: absolute;
     top:0;
-    left:0;
+    left:2vw;
     bottom:0;
-    right: 6vw;
+    right: 0;
 
 }
 .numbercolumn{
@@ -40,20 +40,20 @@
 }
 .numberrow{
     height: 6vh;
-    width:50vw;
+    width:60vw;
     margin:auto;
     align-items: center;
     justify-content: center;
     
     position: absolute;
     top:0;
-    left:1vw;
+    left:10vw;
     bottom:82vh;
     right: 0;
 }
 .numbersInRow{
     display:inline-block;
-    width:50px;
+    width:65px;
     height:20px;
     margin-right:18px;
     text-align: center;
@@ -98,11 +98,13 @@
     border-radius: 5px;
 }
 #timer{
+    border:1px solid black;
+    width: 18vw;
     margin:auto;
     position: absolute;
-    top:10vh;
-    bottom:70vh;
-    left:75vw;
+    top:5vh;
+    bottom:75vh;
+    left:79vw;
     right:0;
     text-align: center;
 
@@ -116,13 +118,13 @@ body{
 }
 .answersDiv{
     border:1px solid black;
-    width: 20vw;
-    height: 50vh;
+    width: 18vw;
+    height: 20vh;
     margin:auto;
     position:absolute;
     top:0;
-    bottom: -45vh;
-    left:0;
+    bottom: 20vh;
+    left:4vw;
     right:-75vw;
     text-align: center;
 }
