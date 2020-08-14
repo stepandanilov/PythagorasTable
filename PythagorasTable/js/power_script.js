@@ -2,12 +2,14 @@ var answer = document.getElementById("answer");
 var myDiv = document.getElementById("mainDiv");
 var countInput = document.getElementById("nCount");
 var number1,number2;
+var power1,power2;
 var nCount;
 var nTries;
 var answerBox = document.getElementById("answerP");
 var correctAnswers=0;
 var multString = document.getElementById("stringP");
 var wrongAnswersBox = document.getElementById("wrongAnswers");
+var selectedMethod;
 
 var stopwatch = document.getElementById("stopwatch");
 var timer = new Stopwatch(stopwatch);
@@ -36,41 +38,39 @@ answer.addEventListener("keydown", function (e) {
 function next(){
     calculate();
     if (nTries==1){
-        multString.textContent = "* X * =";
+        multString.textContent = "*условие* = ";
         answer.value="";
         document.getElementById("startBtn").style.visibility="visible";
         document.getElementById("startBtn").value="Начать заново";
     }else{
         getRandomNumbers();
-        multString.textContent = number1.toString() + " X " + number2.toString() + " = ";
         answer.value="";
     }
 }
 
 function calculate(){
-    if (Math.abs(answer.value - number1 * number2) < 0.0001){
-        correctAnswers++;
-    }else{
-        wrongAnswers.push(number1.toString() + "*" + number2.toString() + "=" + (number1*number2).toString() + "("
-        + answer.value.toString() + ")");
+    if (selectedMethod == 0){
+        if (Math.abs(answer.value - Math.pow(number1,power1) * Math.pow(number2,power2)) < 0.0001){
+            correctAnswers++;
+        }else{
+            wrongAnswers.push(number1.toString() + "^" + power1.toString() + " × " 
+            + number2.toString() + "^" + power2.toString() + " = " 
+            + (Math.pow(number1,power1) * Math.pow(number2,power2)).toString() + "("+ answer.value.toString() + ")");
+        }
     }
 }
 
 function getRandomNumbers(){
-    number1=getRandomInt(8)+2;
-    number2=getRandomInt(8)+2;
-    generateNumbers();
+    if (selectedMethod == 0){
+        number1=getRandomInt(8)+2;
+        number2=getRandomInt(8)+2;
+        power1=getRandomInt(4);
+        power2=getRandomInt(4);
+        multString.textContent = number1.toString() + "^" + power1.toString() + " × " 
+        + number2.toString() + "^" + power2.toString() + " = ";
+    }
 }
 function generateNumbers(){
-    var negativeNumbers=document.getElementById("negativeNumbers").checked;
-    var decimalNumbers=document.getElementById("decimalNumbers").checked;
-    var powerOfTwo=document.getElementById("powerOfTwo").checked;
-    var powerOfThree=document.getElementById("powerOfThree").checked;
-
-    var negativeRandom=false,decimalRandom=false;
-    var powerOfTwoRandom=false,powerOfThreeRandom=false;
-
-    
     if (negativeNumbers){
         if (Math.random() < 0.5){
             negativeRandom=true;
@@ -115,12 +115,13 @@ function start(){
     wrongAnswers = [];
     nCount=countInput.value;
     wrongAnswersBox.textContent = "";
+    selectedMethod = document.getElementById("selectBar").selectedIndex;
+    console.log(selectedMethod);
     if (nCount>0){
         timer.reset();
         timer.start();
         nTries=nCount;
         getRandomNumbers();
-        multString.textContent = number1.toString() + " X " + number2.toString() + " = ";
         document.getElementById("startBtn").style.visibility="hidden";
     }
 }
