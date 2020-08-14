@@ -58,6 +58,15 @@ function calculate(){
             + (Math.pow(number1,power1) * Math.pow(number2,power2)).toString() + "("+ answer.value.toString() + ")");
         }
     }
+    if (selectedMethod == 1){
+        if (Math.abs(answer.value - power1 - power2) < 0.0001){
+            correctAnswers++;
+        }else{
+            wrongAnswers.push(number1.toString() + "^" + power1.toString() + " × " 
+            + number1.toString() + "^" + power2.toString() + " = " 
+            + number1.toString() + "^" +  + "("+ answer.value.toString() + ")");
+        }
+    }
 }
 
 function getRandomNumbers(){
@@ -68,6 +77,13 @@ function getRandomNumbers(){
         power2=getRandomInt(4);
         multString.textContent = number1.toString() + "^" + power1.toString() + " × " 
         + number2.toString() + "^" + power2.toString() + " = ";
+    }
+    if (selectedMethod == 1){
+        number1=getRandomInt(8)+2;
+        power1=getRandomInt(10);
+        power2=getRandomInt(10);
+        multString.textContent = number1.toString() + "^" + power1.toString() + " × " 
+        + number1.toString() + "^" + power2.toString() + " = " + number1.toString() + "^";
     }
 }
 function generateNumbers(){

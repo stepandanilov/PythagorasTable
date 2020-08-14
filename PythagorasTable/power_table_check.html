@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/power_table_style.css">
+    <title>Проверка таблицы умножения</title>
+</head>
+<body>
+    <input type="button" id="startBtn" value="Начать проверку" onclick="start()">
+    <input type="button" id="endBtn" value="Закончить" onclick="end(this)">
+    <input type="button" id="restartBtn" value="Заново" onclick="restart()">
+    <input type="button" id="randomizeNumbersBtn" value="Перемешать числа" onclick="randomizeNumbers()">
+    <input type="button" id="generateNumbersBtn" value="Сгенерировать числа" onclick="generateNumbers()">
+    <form action="menu.html">
+        <input type="submit" id="goBackBtn" value="Назад">
+    </form>
+    <div>
+        <h3 id="headerText">Проверка таблицы степеней</h3>
+    </div>
+    <h1 id="timer"></h1>
+    <div class="outer">
+        <div class="row">
+            <input type="input" id="text22" class="answers" placeholder="0">
+            <input type="input" id="text23" class="answers" placeholder="0">
+            <input type="input" id="text24" class="answers" placeholder="0">
+            <input type="input" id="text25" class="answers" placeholder="0">
+            <input type="input" id="text26" class="answers" placeholder="0">
+            <input type="input" id="text27" class="answers" placeholder="0">
+            <input type="input" id="text28" class="answers" placeholder="0">
+            <input type="input" id="text29" class="answers" placeholder="0">
+        </div>
+        <div class="row">
+            <input type="input" id="text32" class="answers" placeholder="0">
+            <input type="input" id="text33" class="answers" placeholder="0">
+            <input type="input" id="text34" class="answers" placeholder="0">
+            <input type="input" id="text35" class="answers" placeholder="0">
+            <input type="input" id="text36" class="answers" placeholder="0">
+            <input type="input" id="text37" class="answers" placeholder="0">
+            <input type="input" id="text38" class="answers" placeholder="0">
+            <input type="input" id="text39" class="answers" placeholder="0">
+        </div>
+    </div>
+    <div class="numbercolumn">
+        <div class="numbers" id="numbercolumn2">2</div>
+        <div class="numbers" id="numbercolumn3">3</div>
+    </div>
+    <div class="numberrow">
+        <div class="numbersInRow" id="numberrow2">2</div>
+        <div class="numbersInRow" id="numberrow3">3</div>
+        <div class="numbersInRow" id="numberrow4">4</div>
+        <div class="numbersInRow" id="numberrow5">5</div>
+        <div class="numbersInRow" id="numberrow6">6</div>
+        <div class="numbersInRow" id="numberrow7">7</div>
+        <div class="numbersInRow" id="numberrow8">8</div>
+        <div class="numbersInRow" id="numberrow9">9</div>
+    </div>
+    <div class="answersDiv">
+        <p id="accuracy"></p>
+    </div>
+    <div id="parameters">
+        <div>
+            <input type="checkbox" id="negativeNumbers"> Отрицательные числа
+        </div>
+        <div>
+            <input type="checkbox" id="decimalNumbers"> Десятичные числа
+        </div>
+    </div>
+    <script src="js/stopwatch.js"></script>
+    <script src="js/power_table_script.js"></script>
+    </body>
+</html>

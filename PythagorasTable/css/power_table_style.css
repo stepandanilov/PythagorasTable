@@ -1,0 +1,185 @@
+.answers{
+    width:65px;
+    height:25px;
+    margin-right: 10px;
+    text-align: center;
+    
+    font-family:"Lato";
+    font-size:30px;
+}
+.outer{
+    width:60vw;
+    margin:auto;
+
+    height: 15vh;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top:0;
+    left:2vw;
+    bottom:30vh;
+    right: 0;
+
+}
+.numbercolumn{
+    width:3vw;
+    height:15vh;
+
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:30vh;
+    right:55vw;
+}
+.numberrow{
+    height: 6vh;
+    width:60vw;
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+    
+    position: absolute;
+    top:30vh;
+    left:10vw;
+    bottom:82vh;
+    right: 0;
+}
+.numbersInRow{
+    display:inline-block;
+    width:65px;
+    height:20px;
+    margin-right:18px;
+    text-align: center;
+}
+#startBtn{
+    width:200px;
+    height: 50px;
+
+    display:block;
+    margin:auto;
+    position: absolute;
+    top:5vh;
+    left:0;
+    bottom:20vh;
+    right: 82vw;
+    border-radius: 5px;
+}
+#endBtn{
+    width:200px;
+    height: 50px;
+
+    display:block;
+    margin:auto;
+    position: absolute;
+    top:5vh;
+    left:0;
+    bottom:20vh;
+    right: 82vw;
+    border-radius: 5px;
+}
+#restartBtn{
+    width:200px;
+    height: 50px;
+
+    display:block;
+    margin:auto;
+    position: absolute;
+    top:5vh;
+    left:0;
+    bottom:20vh;
+    right: 82vw;
+    border-radius: 5px;
+}
+#timer{
+    border:1px solid black;
+    width: 25vw;
+    margin:auto;
+    position: absolute;
+    top:5vh;
+    bottom:85vh;
+    left:72vw;
+    right:0;
+    text-align: center;
+
+    font-family: "Lato";
+    font-size:50px;
+    font-weight: 300;
+}
+body{
+    font-family:"Lato";
+    font-size:30px;
+}
+.answersDiv{
+    border:1px solid black;
+    width: 18vw;
+    height: 21vh;
+    margin:auto;
+    position:absolute;
+    top:0;
+    bottom: 38vh;
+    left:79vw;
+    right:0;
+    text-align: center;
+}
+#goBackBtn{
+    width:200px;
+    height: 50px;
+    border-radius: 5px;
+}
+#parameters{
+    border:1px solid black;
+    display: block;
+    margin: 0 auto;
+
+    width:17vw;
+    height: 8vh;
+    position: absolute;
+    top:15vh;
+    bottom:20vh;
+    left:0;
+    right:80vw;
+
+    font-size: 20px;
+}
+#randomizeNumbersBtn{
+    position: absolute;
+    width:200px;
+    height: 50px;
+    border-radius: 5px;
+
+    margin:auto;
+    top:25vh;
+    left:0;
+    bottom:20vh;
+    right: 82vw;
+}
+#generateNumbersBtn{
+    position: absolute;
+    width:200px;
+    height: 50px;
+    border-radius: 5px;
+
+    margin:auto;
+    top:45vh;
+    left:0;
+    bottom:20vh;
+    right: 82vw;
+}
+#headerText{
+
+    position: absolute;
+    margin:auto;
+    top:5vh;
+    bottom:80vh;
+    left:30vw;
+    right: 30vw;
+
+    text-align: center;
+}
