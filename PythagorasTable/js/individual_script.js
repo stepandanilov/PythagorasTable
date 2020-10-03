@@ -15,7 +15,7 @@ var timer = new Stopwatch(stopwatch);
 var wrongAnswers = [];
 
 answer.addEventListener("keydown", function (e) {
-    if (e.keyCode === 13 && nTries>0){
+    if (e.code === 'Enter' && nTries>0){
         next();
         nTries--;
         if (nTries == 0){
@@ -64,11 +64,9 @@ function getRandomNumbers(){
 function generateNumbers(){
     var negativeNumbers=document.getElementById("negativeNumbers").checked;
     var decimalNumbers=document.getElementById("decimalNumbers").checked;
-    var powerOfTwo=document.getElementById("powerOfTwo").checked;
-    var powerOfThree=document.getElementById("powerOfThree").checked;
 
-    var negativeRandom=false,decimalRandom=false;
-    var powerOfTwoRandom=false,powerOfThreeRandom=false;
+    var negativeRandom;
+    var decimalRandom;
 
     
     if (negativeNumbers){

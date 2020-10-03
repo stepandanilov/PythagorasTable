@@ -100,16 +100,19 @@
 #timer{
     border:1px solid black;
     width: 18vw;
+
     margin:auto;
     position: absolute;
     top:5vh;
-    bottom:75vh;
+    bottom:87vh;
     left:79vw;
     right:0;
+
     text-align: center;
+    vertical-align: middle;
 
     font-family: "Lato";
-    font-size:50px;
+    font-size:40px;
     font-weight: 300;
 }
 body{
@@ -123,7 +126,7 @@ body{
     margin:auto;
     position:absolute;
     top:0;
-    bottom: 20vh;
+    bottom: 40vh;
     left:4vw;
     right:-75vw;
     text-align: center;

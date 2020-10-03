@@ -74,14 +74,14 @@ function reset(){
     document.getElementById("accuracy").textContent="";
 }
 function generateNumbers(){
+
     reset();
+
     var negativeNumbers=document.getElementById("negativeNumbers").checked;
     var decimalNumbers=document.getElementById("decimalNumbers").checked;
-    var powerOfTwo=document.getElementById("powerOfTwo").checked;
-    var powerOfThree=document.getElementById("powerOfThree").checked;
 
-    var negativeRandom=false,decimalRandom=false;
-    var powerOfTwoRandom=false,powerOfThreeRandom=false;
+    var negativeRandom;
+    var decimalRandom;
 
     for(i=2;i<=9;i++){
         if (negativeNumbers){
@@ -98,22 +98,6 @@ function generateNumbers(){
             } 
             else{
                 decimalRandom=false;
-            }
-        }
-        if (powerOfTwo){
-            if (Math.random() < 0.5){
-                powerOfTwoRandom=true;
-            } 
-            else{
-                powerOfTwoRandom=false;
-            }
-        }
-        if (powerOfThree){
-            if (Math.random() < 0.5){
-                powerOfThreeRandom=true;
-            } 
-            else{
-                powerOfThreeRandom=false;
             }
         }
         if (decimalRandom) document.getElementById("numbercolumn" + i).innerText="0." + document.getElementById("numbercolumn" + i).innerText;
